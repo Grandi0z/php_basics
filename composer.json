@@ -1,0 +1,17 @@
+{
+    "name": "grandioz/basic",
+    "description": "hala",
+    "autoload": {
+        "psr-4": {
+            "Grandioz\\Basic\\": "src/",
+            "Classes\\": "Classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joseph Lwanzo Khausi",
+            "email": "josephlkausi@gmail.com"
+        }
+    ],
+    "require": {}
+}
