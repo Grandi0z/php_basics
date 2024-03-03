@@ -116,21 +116,57 @@
 // use Classes\static_beding\ChildClass;
 // use Classes\static_beding\ParentClass;
 
-require "./vendor/autoload.php";
+
 
 // $parent =new ParentClass();
 // $child = new ChildClass();
 
 // var_dump(ParentClass::getName(), ChildClass::getName());
 
-use Classes\Traits\ExpressoMaker;
-use Classes\Traits\IrishCoffee;
+// use Classes\Traits\ExpressoMaker;
+// use Classes\Traits\IrishCoffee;
 
-$expresso = new ExpressoMaker();
-$irish = new IrishCoffee();
+// $expresso = new ExpressoMaker();
+// $irish = new IrishCoffee();
 
-var_dump(
-    $expresso->makeExpresso(),
-    $irish->makeIrishCoffee()
-);
+// var_dump(
+//     $expresso->makeExpresso(),
+//     $irish->makeIrishCoffee()
+// );
 
+// use Classes\Exceptions\Login;
+// use Classes\Exceptions\User;
+// use Classes\Exceptions\UserNotVerifiedException;
+
+// require "./vendor/autoload.php";
+
+// $user = new User('patrick', "123456");
+// $login = new Login($user);
+
+// try {
+//     var_dump($login->login());
+// } catch (UserNotVerifiedException $e) {
+//     echo $e->getMessage().', on the line'.$e->getLine().' in the file'.$e->getFile();
+// }
+
+use Classes\Router\Router;
+
+require "./vendor/autoload.php";
+
+echo 'home';
+
+$router = new Router();
+
+$router->register('/', function() {
+    return 'HomePage';
+});
+
+$router->register('contact', function() {
+    return 'Contact Page';
+});
+
+echo '<pre>';
+var_dump($router);
+echo '</pre>';
+
+//$router->resolve();
